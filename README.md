@@ -2,7 +2,7 @@
 
 **Author:** Farhad Oghazian (April 2025)
 
----
+
 
 ## A. Preprocessing  
 
@@ -56,7 +56,7 @@ These variables reflect ongoing conditions that impact crops regularly, so avera
   - Additional 7692 rows with missing climate/soil data removed.  
   - Outliers removed above the 99.97th percentile (e.g., extremely high yields in specific country-crop pairs).  
 
----
+
 
 ## B. Modeling  
 
@@ -86,7 +86,7 @@ We used a **3-layer Multilayer Perceptron (MLP)** for regression, implemented in
 - Loss: MSE on log-transformed yield  
 - SGD tested but less stable and more sensitive to hyperparameters.  
 
----
+
 
 ## C. Features & Labels  
 
@@ -114,7 +114,7 @@ We used a **3-layer Multilayer Perceptron (MLP)** for regression, implemented in
 
 - All numerical features standardized with `StandardScaler`.  
 
----
+
 
 ## D. Feature Selection  
 
@@ -124,7 +124,7 @@ We used a **3-layer Multilayer Perceptron (MLP)** for regression, implemented in
   - Soil moisture and temperature (across depths) consolidated into two variables: SoilMoi & SoilTMP.  
   - High correlation between TVeg_mean and Rainf_mean → kept only Rainf_mean.  
 
----
+
 
 ## Key Takeaways  
 
@@ -133,4 +133,4 @@ We used a **3-layer Multilayer Perceptron (MLP)** for regression, implemented in
 - Built a **PyTorch MLP** with embeddings for categorical features.  
 - Achieved stable performance with **Adam optimizer** on log-transformed yields.  
 
----
+
